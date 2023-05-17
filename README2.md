@@ -1,8 +1,12 @@
-# ReadMe Generator V1.0
+# rrr
    ## Description
-   Project Description
+   ### The ReadMe Generator Tool was developed by [rrr](undefined).
+   ### [GiHub Link](rrr)
+   ### [Video recordering]( rrr)
+   ### Date: Wed May 17 2023 15:09:30 GMT-0400 (Eastern Daylight Time)
 
-   [GiHub Link](undefined)
+   rrr
+
    ## Table of Contents
    - [Description](#description)
    - [Installation]( #installation)
@@ -12,16 +16,16 @@
    - [Tests](#tests)
    - [Questions](#questions)
    ## Installation
-   undefined
+   rrr
    ## Usage
-    
-   For more details preasse review the [video recordering]( https://github.com/InnaFedorenko)
+   rrr 
+   For more details prease review the video.
    ## License
    Specify your project's license information here.
    ## Contributing
-   
+   rrr
    ## Tests
-   
+   rrr
    ## Questions
    If you have any questions, you can reach out to me at 
-   [](mailto:).
+   [rrr](mailto:rrr).

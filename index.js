@@ -29,27 +29,43 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Enter your project title:'
+        message: 'Enter your project title.'
     },
     {
-        type: 'editor',
+        type: 'input',
+        // type: 'editor',
         name: 'description',
-        message: `Write your project description here. /n(To quit the editor, press esc, them :wq keys combination.`
+        message: `Write your project description here. (To start typing preess i. To quit the editor, press esc, them :wq keys combination.)`
     },
     {
-        type: 'editor',
+        type: 'input',
+        name: 'authors',
+        message: `Add link to your Github account.`,
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: `Add link to your Github account.`,
+    },
+    {
+        type: 'input',
+        name: 'video',
+        message: `Add link to your video.`,
+    },
+    {
+        type: 'input',
         name: 'intallation',
-        message:  `Write your installation instructions here. /n(To quit the editor, press esc, them :wq keys combination.`
+        message: `Write your installation instructions here.`
     },
     {
-        type: 'editor',
+        type: 'input',
         name: 'usage',
-        message: `Write about how to use your project here./n(To quit the editor, press esc, them :wq keys combination.`
+        message: `Write about how to use your project here. `
     },
     {
-        type: 'editor',
+        type: 'input',
         name: 'contribution',
-        message: `Provide guidelines for contributing to your project here./n(To quit the editor, press esc, them :wq keys combination.`
+        message: `Provide guidelines for contributing to your project here. `
     },
     {
         type: 'input',
@@ -58,8 +74,8 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'questions',
-        message: `Add your Github and email`,
+        name: 'email',
+        message: `Add your email adress`,
     }
     //,
     // {
@@ -73,11 +89,12 @@ const questions = [
  * questions - parameter, array type, contains list of questions
 */
 function askQuestions(questions) {
-    const fileName = 'README1.md';
+    const fileName = 'README2.md';
     inquirer
         .prompt(questions)
         .then((answers) => {
             console.log(answers);
+            console.log(fileName)
             writeToFile(fileName, answers);
 
         })
@@ -89,40 +106,45 @@ function askQuestions(questions) {
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    const title = 'Your Project Title';
+    // console.log (fileName)
 
-    const readmeTemplate =
-        `# ${title}
+    const currentDate = new Date();
+
+    const readmeTemplate = `# ${data.title}
+    ## Table of Contents
+    - [Description](#description)
+    - [Installation]( #installation)
+    - [Usage](#usage)
+    - [License](#license)
+    - [Contributing](#contributing)
+    - [Tests](#tests)
+    - [Questions](#questions) 
    ## Description
-   Write your project description here.
-   ## Table of Contents
-   - [Description](#description)
-   - [Table of Contents](#table-of-contents)
-   - [Installation]( #installation)
-   - [Usage](#usage)
-   - [License](#license)
-   - [Contributing](#contributing)
-   - [Tests](#tests)
-   - [Questions](#questions)
+   ### The ReadMe Generator Tool was developed by [${data.authors}](${data.guthub}).
+   ### [GiHub Link](${data.github})
+   ### [Video recordering]( ${data.video})
+   ### Date: ${currentDate}
+   ${data.description}
    ## Installation
-   Write your installation instructions here.
+   ${data.intallation}
    ## Usage
-   Write about how to use your project here.
+   ${data.usage} 
+   For more details prease review the video.
    ## License
    Specify your project's license information here.
    ## Contributing
-   Provide guidelines for contributing to your project here.
+   ${data.contribution}
    ## Tests
-   Explain how to run tests for your project here.
+   ${data.tests}
    ## Questions
    If you have any questions, you can reach out to me at 
-   [your-email@example.com](mailto:your-email@example.com).`
+   [${data.email}](mailto:${data.email}).`
 
-    // console.log(readmeTemplate);
+    console.log(readmeTemplate);
 
     dataFile = JSON.stringify(data);
     fs.writeFile(fileName, readmeTemplate, (err) =>
-        err ? console.log(err) : console.log('Successfully created README.md!')
+        err ? console.log(err) : console.log('Thank you for the detailks. README.md file was succesfully created!')
     );
 }
 
@@ -130,7 +152,6 @@ function writeToFile(fileName, data) {
 function init() {
     console.log(`Welcome to the ReadMe generator!\nPlease follow the instructions:`);
     // console.log(renerateMarkdown.renderLicenseBadge('MIT'))
-    let data = 'Write to file test';
     askQuestions(questions);
 
     // let fileName = 'README.md';
