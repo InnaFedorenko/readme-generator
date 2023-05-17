@@ -13,8 +13,6 @@
     THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
     WHEN I enter my email address
     THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-    WHEN I click on the links in the Table of Contents
-    THEN I am taken to the corresponding section of the README
  */
 
 // Packages needed for this application
@@ -31,27 +29,37 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Enter your project title:',
+        message: 'Enter your project title:'
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'description',
-        message: 'Enter your project description (multiline)',
+        message: `Write your project description here. /n(To quit the editor, press esc, them :wq keys combination.`
     },
     {
-        type: 'input',
+        type: 'editor',
         name: 'intallation',
-        message: `Enter project's installation instructions (multiline)`,
+        message:  `Write your installation instructions here. /n(To quit the editor, press esc, them :wq keys combination.`
     },
     {
-        type: 'input',
+        type: 'editor',
+        name: 'usage',
+        message: `Write about how to use your project here./n(To quit the editor, press esc, them :wq keys combination.`
+    },
+    {
+        type: 'editor',
         name: 'contribution',
-        message: `Enter project's contribution guidelines.`,
+        message: `Provide guidelines for contributing to your project here./n(To quit the editor, press esc, them :wq keys combination.`
     },
     {
         type: 'input',
         name: 'tests',
-        message: `Enter project's test instructions.`,
+        message: `Explain how to run tests for your project here.`,
+    },
+    {
+        type: 'input',
+        name: 'questions',
+        message: `Add your Github and email`,
     }
     //,
     // {
@@ -65,7 +73,7 @@ const questions = [
  * questions - parameter, array type, contains list of questions
 */
 function askQuestions(questions) {
-    const fileName = 'README.md';
+    const fileName = 'README1.md';
     inquirer
         .prompt(questions)
         .then((answers) => {
@@ -76,60 +84,45 @@ function askQuestions(questions) {
         .catch((error) => {
             console.error(error);
         });
-        //return answers;
+    //return answers;
 }
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { 
+function writeToFile(fileName, data) {
     const title = 'Your Project Title';
 
-    const readmeTemplate = `
-    # ${title}
-    
-    ## Description
-    
-    Write your project description here.
-    
-    ## Table of Contents
-    
-    - [Description](#description)
-    - [Table of Contents](#table-of-contents)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
-    
-    ## Installation
-    
-    Write your installation instructions here.
-    
-    ## Usage
-    
-    Write about how to use your project here.
-    
-    ## License
-    
-    Specify your project's license information here.
-    
-    ## Contributing
-    
-    Provide guidelines for contributing to your project here.
-    
-    ## Tests
-    
-    Explain how to run tests for your project here.
-    
-    ## Questions
-    
-    If you have any questions, you can reach out to me at [your-email@example.com](mailto:your-email@example.com).`
-    
-    console.log(readmeTemplate);
-    
+    const readmeTemplate =
+        `# ${title}
+   ## Description
+   Write your project description here.
+   ## Table of Contents
+   - [Description](#description)
+   - [Table of Contents](#table-of-contents)
+   - [Installation]( #installation)
+   - [Usage](#usage)
+   - [License](#license)
+   - [Contributing](#contributing)
+   - [Tests](#tests)
+   - [Questions](#questions)
+   ## Installation
+   Write your installation instructions here.
+   ## Usage
+   Write about how to use your project here.
+   ## License
+   Specify your project's license information here.
+   ## Contributing
+   Provide guidelines for contributing to your project here.
+   ## Tests
+   Explain how to run tests for your project here.
+   ## Questions
+   If you have any questions, you can reach out to me at 
+   [your-email@example.com](mailto:your-email@example.com).`
+
+    // console.log(readmeTemplate);
+
     dataFile = JSON.stringify(data);
     fs.writeFile(fileName, readmeTemplate, (err) =>
-      err ? console.log(err) : console.log('Successfully created README.md!')
+        err ? console.log(err) : console.log('Successfully created README.md!')
     );
 }
 
