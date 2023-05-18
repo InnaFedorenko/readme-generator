@@ -13,6 +13,7 @@ A command-line tool for generating professional README files easily.
 - [Questions](#questions)
 
 ## Description
+InnaFedorenko
 ## Features
 
 - Interactive command-line interface
@@ -54,12 +55,11 @@ Write your installation instructions here.
 To use the ReadMe Generator Tool, follow these steps:
 
 1. Clone the GitHub repository: [ReadMe Generator Tool](#github)
-2. Install the required dependencies by running `npm install` in the project directory.
+2. Install the required dependencies by running ```npm install``` in the project directory.
 
 
 ## Usage
-To generate a README file with the ReadMe Generator Tool, run the following command:
-```npm index``` and follow the instruction to provifr ReadMe data.
+To generate a README file with the ReadMe Generator Tool, run the following command:```npm index``` and follow the instruction to provifr ReadMe data.
 
 ## License
 Specify your project's license information here.
@@ -68,13 +68,11 @@ Specify your project's license information here.
 Contributions are welcome! 
 
 ## Tests
-ToBe developed for future version.
-You can run the automated tests for the ReadMe Generator Tool by executing the following command: 'npx jest' ot 'npm run test'
+ToBe developed for future version.You can run the automated tests for the ReadMe Generator Tool by executing the following command: ```npx jest``` ot ```npm run test```
 
 
 ## Questions
-If you have any questions, you can reach out to me at  my email adress :
-[your-email@example.com](mailto:your-email@example.com).
+If you have any questions, you can reach out to me at  my email adress :[your-email@example.com](mailto:your-email@example.com).
 
 
 [def]: #tests
