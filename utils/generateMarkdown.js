@@ -11,7 +11,7 @@ function renderLicenseLink(license) {
     'Apache 2.0': 'This application is covered under the [Apache 2.0 License](https://opensource.org/licenses/Apache-2.0).',
     'GNU GPLv3': 'This application is covered under the [GNU GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html).',
     'BSD 3-Clause': 'This application is covered under the [BSD 3-Clause License](https://opensource.org/licenses/BSD-3-Clause).',
-    'Creative Commons': 'This application is covered under the [Creative Commons License](https://creativecommons.org/licenses/).',
+    'Creative Commons': 'This application is covered under the [Creative Commons License](https://creativecommons.org/licenses/).'
   };
 
   return licenseNotices[license] || '';
@@ -26,11 +26,16 @@ function renderLicenseSection(license) {
   return `${licenseBadge}  \n  ${licenseLink}`;
 }
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}`;
-}
+// Function to generate markdown for README
+function generateMarkdown(section) {
+  const markdownLevels = {
+    '1': '#',
+    '2': '##',
+    '3': '###'
+  };
 
+  return markdownLevels[section] || '';
+}
 module.exports = {
   generateMarkdown,
   renderLicenseBadge,

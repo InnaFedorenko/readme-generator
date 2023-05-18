@@ -14,15 +14,15 @@ A command-line tool for generating professional README files easily.
 
 ## Description
 InnaFedorenko
-## Features
+### Features
 
 - Interactive command-line interface
 - Easy-to-use prompts for project details
 - Generates README files with a consistent structure
 - Saves time and effort in creating README documentation
 
-## Requirements
-### User Story
+### Requirements
+#### User Story
 
 ```md
 AS A developer
@@ -30,7 +30,7 @@ I WANT a README generator
 SO THAT I can quickly create a professional README for a new project
 ```
 
-### Acceptance Criteria
+#### Acceptance Criteria
 
 ```md
 GIVEN a command-line application that accepts user input
