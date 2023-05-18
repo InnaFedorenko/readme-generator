@@ -1,9 +1,19 @@
-# Your Project Title
-A command-line tool for generating professional README files easily.
+# A command-line tool for generating professional README files easily.
+## Table of Contents
+- [Description](#description)
+- [Installation]( #installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions) 
+##  Description
+- The ReadMe Generator Tool was developed by [Inna Fedorenko](https://github.com/InnaFedorenko).
+- [GiHub Link](https://github.com/InnaFedorenko/readme-generator)
+- [Video recordering]( https://drive.google.com/file/d/19Qpik2V2B7YaBmsGOjacuD_m0AZwwpm4/preview)
+- Date: 05-18-2023
 
-## Description
-
-Features
+### Features
 - Interactive command-line interface
 - Easy-to-use prompts for project details
 - Generates README files with a consistent structure
@@ -38,29 +48,24 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
 
-## Installation
+
+##  Installation
 Write your installation instructions here.
 To use the ReadMe Generator Tool, follow these steps:
 
 1. Clone the GitHub repository: [ReadMe Generator Tool](#github)
 2. Install the required dependencies by running ```npm install``` in the project directory.
 
-
-## Usage
-To generate a README file with the ReadMe Generator Tool, run the following command:```npm index``` and follow the instruction to provifr ReadMe data.
-
+##  Usage
+To generate a README file with the ReadMe Generator Tool, run the following command:```npm index``` and follow the instruction to provifr ReadMe data. 
+For more details prease review the video.
 ## License
-Specify your project's license information here.
-
-## Contributing
+![License](https://img.shields.io/badge/License-Creative%20Commons-yellow.svg)  
+  This application is covered under the [Creative Commons License](https://creativecommons.org/licenses/).
+##  Contributing
 Contributions are welcome! 
-
-## Tests
+##  Tests
 ToBe developed for future version.You can run the automated tests for the ReadMe Generator Tool by executing the following command: ```npx jest``` ot ```npm run test```
-
-
-## Questions
-If you have any questions, you can reach out to me at  my email adress :[your-email@example.com](mailto:your-email@example.com).
-
-
-https://drive.google.com/file/d/1MWlLBhSBg6Z_6OOc9mKOdJZZ3D640Pgu/preview
+##  Questions
+If you have any questions, you can reach out to [me](https://github.com/InnaFedorenko) at 
+[ivf.fedorenko@gmail.com](mailto:ivf.fedorenko@gmail.com).
