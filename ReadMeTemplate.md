@@ -1,21 +1,9 @@
 # Your Project Title
 A command-line tool for generating professional README files easily.
 
-## Table of Contents
-## 
-
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests][def]
-- [Questions](#questions)
-
 ## Description
-InnaFedorenko
-### Features
 
+Features
 - Interactive command-line interface
 - Easy-to-use prompts for project details
 - Generates README files with a consistent structure
@@ -75,4 +63,4 @@ ToBe developed for future version.You can run the automated tests for the ReadMe
 If you have any questions, you can reach out to me at  my email adress :[your-email@example.com](mailto:your-email@example.com).
 
 
-[def]: #tests
+https://drive.google.com/file/d/1MWlLBhSBg6Z_6OOc9mKOdJZZ3D640Pgu/preview

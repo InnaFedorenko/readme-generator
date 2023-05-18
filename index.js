@@ -33,7 +33,7 @@ const questions = [
     {
         type: 'editor',
         name: 'description',
-        message: `Write your project description here. (To start typing preess i. To quit the editor, press esc, them :wq keys combination.)`
+        message: `Write your project description here. (To start typing press i. To quit the editor, press esc, them :wq keys combination.)`
     },
     {
         type: 'input',
@@ -64,7 +64,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Choose a license for your application:',
-        choices: ['MIT', 'Apache 2.0', 'GNU GPLv3', 'Mozilla Public', 'Creative Commons', 'No License'],
+        choices: ['MIT', 'Apache 2.0', 'GNU GPLv3', 'Creative Commons', 'No License'],
     },
     {
         type: 'input',
@@ -83,24 +83,20 @@ const questions = [
     }
 ];
 
-/** This function initiate questions 
- * questions - parameter, array type, contains list of questions
-*/
+// Function initiate questions 
 function askQuestions(questions) {
 
     // Ask the questions and generate the README
     inquirer.prompt(questions).then(generateREADME);
 }
-
-// TODO: Create a function to write README file
+// Function to generate README 
 function generateREADME(data) {
     //Get ReadMe data
     const fileName = 'README.md';
     const currentDate = moment().format('MM-DD-YYYY');
     const licenseSection = generateContent.renderLicenseSection(data.license);
 
-    const readmeContent = 
-`${generateContent.generateMarkdown(1)} ${data.title}
+    const readmeContent =`${generateContent.generateMarkdown(1)} ${data.title}
 ${generateContent.generateMarkdown(2)} Table of Contents
 - [Description](#description)
 - [Installation]( #installation)
@@ -116,6 +112,7 @@ ${generateContent.generateMarkdown(2)}  Description
 - Date: ${currentDate}
 
 ${generateContent.generateMarkdown(3)} ${data.description}
+
 ${generateContent.generateMarkdown(2)}  Installation
 ${data.intallation}
 ${generateContent.generateMarkdown(2)}  Usage
@@ -137,14 +134,11 @@ If you have any questions, you can reach out to [me](https://github.com/${data.g
     )
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
     console.log(`Welcome to the ReadMe generator!\nPlease follow the instructions:`);
     // console.log(renerateMarkdown.renderLicenseBadge('MIT'))
     askQuestions(questions);
-
-    // let fileName = 'README.md';
-    // writeToFile(fileName, data);
 }
 
 // Function call to initialize app
